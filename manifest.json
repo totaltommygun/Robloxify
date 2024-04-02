@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Robloxify",
+    "description": "Take roblox to the next level!"
+    ,"version": "1.0"
+    ,"icons": {
+      "16": "/images/MiRBX-16.png"
+     ,"48": "/images/MiRBX-48.png"
+     , "128": "/images/MiRBX-128.png"
+    },
+    "permissions": [
+      "file:///*"
+    ],
+    "page_action": {
+      "default_icon": {
+        "16": "/images/MiRBX-16.png"
+        ,"48": "/images/MiRBX-48.png"
+       ,"128": "/images/MiRBX-128.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["https://www.roblox.com/*"],
+        "css": ["main.css"],
+        "js": ["robloxify.js"]
+    }]
+    }
