@@ -400,3 +400,32 @@ robloxifyHeaderContainer.appendChild(playerInfoContainer)
 playerInfoContainer.appendChild(currentPlayerImage)
 playerInfoContainer.appendChild(welcomeText)
 playerInfoContainer.appendChild(currentPlayerName)
+
+function removeElementsByClass(className) {
+  document.querySelectorAll(`.${className}`).forEach(element => element.remove());
+}
+
+function removeElementById(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.remove();
+  }
+}
+
+function removeElementsByTagName(tagName) {
+  document.querySelectorAll(tagName).forEach(element => element.remove());
+}
+
+window.addEventListener('load', () => {
+  removeElementsByClass('header');
+  removeElementsByClass('navbar');
+  removeElementsByClass('sidebar');
+  
+  removeElementById('main-header');
+  removeElementById('footer');
+
+  removeElementsByTagName('div');
+  removeElementsByTagName('span');
+  
+  document.querySelectorAll('iframe').forEach(iframe => iframe.remove());
+});
